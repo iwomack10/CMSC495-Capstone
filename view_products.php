@@ -4,11 +4,6 @@ include 'config/db.php';
 
 $sql = "SELECT * FROM products";
 $result = $connection->query($sql);
-
-if (!isset($_SESSION['username'])) {
-    header('Location: login.php');
-    exit();
-}
 ?>
 <div class="container mt-5">
     <h2>View Products</h2>
@@ -35,7 +30,7 @@ if (!isset($_SESSION['username'])) {
                             <td>{$row['price']}</td>
                             <td>
                                 <a href='edit_product.php?id={$row['id']}' class='btn btn-warning btn-sm'>Edit</a>
-                                <a href='delete_product.php?id={$row['id']}' class='btn btn-danger btn-sm'>Delete</a>
+                                <a href='delete_product.php?id={$row['id']}' class='btn btn-danger btn-sm' onclick='return confirmDelete();'>Delete</a>
                             </td>
                         </tr>";
                 }
@@ -47,3 +42,8 @@ if (!isset($_SESSION['username'])) {
     </table>
 </div>
 <?php include 'config/footer.php'; ?>
+<script>
+function confirmDelete() {
+    return confirm('Are you sure you want to delete this product?');
+}
+</script>
