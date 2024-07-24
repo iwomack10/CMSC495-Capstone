@@ -11,9 +11,10 @@
     <?php
     session_start();
     ?>
+    <!-- Sets image and nav -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <a class="navbar-brand" href="index.php">
-            <img src="assets/images/RIMA.png" alt="RIMA CO." height="100">
+            <img src="assets/images/RIMA.png" alt="RIMA CO." height="100"> 
         </a>
             <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">

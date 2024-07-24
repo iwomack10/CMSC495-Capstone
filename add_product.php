@@ -19,6 +19,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         echo "Error: " . $sql . "<br>" . $connection->error;
     }
 }
+// begins add new product
 ?>
 <div class="container mt-5">
     <h2>Add New Product</h2>

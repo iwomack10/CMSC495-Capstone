@@ -1,7 +1,7 @@
 <?php
 $host = 'localhost';
 $user = 'root';
-$password = '';
+$password = ''; //pw never set
 $database = 'inventory_management_db';
 
 $connection = new mysqli($host, $user, $password, $database);
